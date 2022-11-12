@@ -1,10 +1,3 @@
-import faker from 'faker';
-
-let products = '';
-
-for (let i = 0; i < 5; i++) {
-  const name = faker.commerce.productName();
-  products += `<div>${name}</div>`;
-}
-
-document.querySelector('#dev-products').innerHTML = products;
+// Async import.. gives webpack opportunity to resolve dependencies, asynchronously.
+//   /ow, direct import will give shared module/library errors.
+import('./bootstrap')

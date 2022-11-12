@@ -1,5 +1,3 @@
-import faker from 'faker';
-
-const cartText = `<div>You have ${faker.random.number()} items in your cart</div>`;
-
-document.querySelector('#cart-dev').innerHTML = cartText;
+// Async import.. gives webpack opportunity to resolve dependencies, asynchronously.
+//   /ow, direct import will give shared module/library errors.
+import('./bootstrap')
